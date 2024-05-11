@@ -27,3 +27,21 @@ document.body.appendChild(elem);
 
 // Գտնել այդ էլեմենտը id-ով
 foundElem = document.getElementById('tv')
+
+//3) Ստեղծել կամայական էլեմենտներ, որոնք կունենան կլաս "list"
+let div = document.createElement('div');
+let p = document.createElement('p');
+
+div.className = 'list';
+p.className = 'list';
+
+document.body.appendChild(div);
+document.body.appendChild(p);
+
+// Որոնման միջոցով գտնել այդ էլեմենտները կլասի միջոցով
+let elementsWithClassList = document.querySelectorAll('.list');
+
+// Եվ ցիկլում դուրս բերել կոնսոլում
+elementsWithClassList.forEach(function(element) {
+    console.log(element);
+});
