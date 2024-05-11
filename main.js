@@ -104,3 +104,25 @@ if (foundField) {
 }
 
 console.log(foundField);
+
+// 7) Ստեղծել div, որը կպարունակի կամայական ցուցակ
+let containerDiv = document.createElement('div');
+let ulElement = document.createElement('ul');
+containerDiv.appendChild(ulElement);
+
+// Որոնել ցուցակի 3-րդ անդամը, ստանալ այդ անդամի պարունակությունը
+for (let i = 1; i <= 5; i++) {
+  let liElement = document.createElement('li');
+  liElement.textContent = `Item ${i}`;
+  ulElement.appendChild(liElement);
+  if (i === 3) {
+      // պահպանել այն պարփակող div-ի data-list-val ատրիբուտում
+      containerDiv.setAttribute('data-list-val', liElement.textContent);
+  }
+}
+
+containerDiv.appendChild(ulElement);
+document.body.appendChild(containerDiv);
+console.log(containerDiv);
+
+
