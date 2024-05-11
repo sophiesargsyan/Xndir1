@@ -83,3 +83,24 @@ for (let i = 0; i < headers.length; i++) {
 }
 console.log(foundHeader);
 
+// 6) Ստեղծած ֆորմաներից մեկում ավելացնել թվային դաշտ
+let firstForm2 = document.createElement('form');
+firstForm.setAttribute('name', 'login');
+
+let numericField = document.createElement('input');
+numericField.setAttribute('type', 'number');
+
+firstForm.appendChild(numericField);
+let secondForm2 = document.createElement('form');
+document.body.appendChild(firstForm);
+document.body.appendChild(secondForm);
+
+// Որոնման միջոցով գտնել այդ դաշտը և իր արժեքը պահպանել նույն էլեմենտի data-val ատրիբուտի արժեքում:
+let foundField = document.querySelector('[name="login"] input[type="number"]');
+
+if (foundField) {
+  let numericValue = foundField.value;
+  foundField.setAttribute('data-val', numericValue);
+}
+
+console.log(foundField);
