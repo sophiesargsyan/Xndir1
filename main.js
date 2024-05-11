@@ -20,3 +20,10 @@ rows.forEach(function(row) {
     firstCell.style.backgroundColor = "blue";
 });
 
+//2) Ստեղծել էլեմենտ, որը կունենա "tv" id 
+let elem = document.createElement('div')
+elem.id = 'tv';
+document.body.appendChild(elem);
+
+// Գտնել այդ էլեմենտը id-ով
+foundElem = document.getElementById('tv')
