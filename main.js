@@ -26,7 +26,7 @@ elem.id = 'tv';
 document.body.appendChild(elem);
 
 // Գտնել այդ էլեմենտը id-ով
-foundElem = document.getElementById('tv')
+foundElem1 = document.getElementById('tv')
 
 //3) Ստեղծել կամայական էլեմենտներ, որոնք կունենան կլաս "list"
 let div = document.createElement('div');
@@ -45,3 +45,16 @@ let elementsWithClassList = document.querySelectorAll('.list');
 elementsWithClassList.forEach(function(element) {
     console.log(element);
 });
+
+// 4) Ստեղծել երկու ֆորմաներ, որոնցից մեկը ունի name="login" ատրիբուտ
+let firstForm = document.createElement('form');
+firstForm.setAttribute('name', 'login');
+
+let secondForm = document.createElement('form');
+
+document.body.appendChild(firstForm);
+document.body.appendChild(secondForm);
+
+// Որոնման միջոցով գտնել այդ էլեմենտը
+let foundElem2 = document.querySelector('[name="login"]');
+
