@@ -126,9 +126,9 @@ document.body.appendChild(containerDiv);
 console.log(containerDiv);
 
 // 8) Ստեղծել p էլեմենտ, որն ունի կլաս "message"
-let elem = document.createElement('p');
-elem.classList.add('message');
-document.body.appendChild(elem);
+let elem_ = document.createElement('p');
+elem_.classList.add('message');
+document.body.appendChild(elem_);
 
 // prompt-ի միջոցով ստանալ օգտատիրոջից հաղորդագրություն և անվտանգ գրել այն p-էլեմենտում
 let userMessage = prompt("Please enter your message:");
