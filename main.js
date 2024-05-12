@@ -21,12 +21,12 @@ rows.forEach(function(row) {
 });
 
 //2) Ստեղծել էլեմենտ, որը կունենա "tv" id 
-let elem = document.createElement('div')
-elem.id = 'tv';
-document.body.appendChild(elem);
+let elemm = document.createElement('div')
+elemm.id = 'tv';
+document.body.appendChild(elemm);
 
 // Գտնել այդ էլեմենտը id-ով
-foundElem1 = document.getElementById('tv')
+foundElemm = document.getElementById('tv')
 
 //3) Ստեղծել կամայական էլեմենտներ, որոնք կունենան կլաս "list"
 let div = document.createElement('div');
