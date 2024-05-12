@@ -26,7 +26,7 @@ elemm.id = 'tv';
 document.body.appendChild(elemm);
 
 // Գտնել այդ էլեմենտը id-ով
-foundElemm = document.getElementById('tv')
+let foundElem1 = document.getElementById('tv')
 
 //3) Ստեղծել կամայական էլեմենտներ, որոնք կունենան կլաս "list"
 let div = document.createElement('div');
@@ -92,6 +92,7 @@ numericField.setAttribute('type', 'number');
 
 firstForm.appendChild(numericField);
 let secondForm2 = document.createElement('form');
+
 document.body.appendChild(firstForm);
 document.body.appendChild(secondForm);
 
