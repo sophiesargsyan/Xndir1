@@ -142,3 +142,32 @@ if (messageElement) {
     console.error("Element with class 'message' not found.");
 }
 
+// 9) Ստեղծել հինգ տարբեր հղումներ, 3-ը հարաբերական հղումներ են, 2-ը` բացարձակ
+let elem1 = document.createElement('a');
+let elem2 = document.createElement('a');
+let elem3 = document.createElement('a');
+let elem4 = document.createElement('a');
+let elem5 = document.createElement('a');
+
+elem1.setAttribute('href', "https://www.it-lezoo.com");
+elem2.setAttribute('href', "https://www.example.com");
+elem3.setAttribute('href', "page.html");
+elem4.setAttribute('href', "main.js");
+elem5.setAttribute('href', "python.py");
+
+let elems = [elem1, elem2, elem3, elem4, elem5];
+
+for (let i = 0; i < elems.length; i++) {
+    elems[i].textContent = "Link " + (i + 1);
+    document.body.appendChild(elems[i]);
+}
+
+// Որոնման միջոցով գտնել հղումները և բոլոր բացարձակ հղումները ներկել կարմիր
+let links = document.getElementsByTagName('a');
+
+for (let i = 0; i < links.length; i++) {
+    let hrefValue = links[i].getAttribute('href');
+    if (hrefValue && (hrefValue.startsWith('http://') || hrefValue.startsWith('https://'))) {
+        links[i].style.color = 'red';
+    }
+}
