@@ -171,3 +171,9 @@ for (let i = 0; i < links.length; i++) {
         links[i].style.color = 'red';
     }
 }
+
+// 10) Ալերտի միջոցով գրել "էջի կոնտենտը {lang} լեզվով է"
+let lang = document.documentElement.lang;
+let message = "The content of the page is in " + lang;
+alert(message);
+
