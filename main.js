@@ -76,10 +76,10 @@ document.body.appendChild(header3);
 let headers = document.getElementsByTagName('h2');
 let foundHeader;
 for (let i = 0; i < headers.length; i++) {
-  if (headers[i].textContent === "JavaScript DOM lessons") {
-    foundHeader = headers[i];
-    break;
-  }
+    if (headers[i].textContent === "JavaScript DOM lessons") {
+        foundHeader = headers[i];
+        break;
+    }
 }
 console.log(foundHeader);
 
@@ -99,8 +99,8 @@ document.body.appendChild(secondForm);
 let foundField = document.querySelector('[name="login"] input[type="number"]');
 
 if (foundField) {
-  let numericValue = foundField.value;
-  foundField.setAttribute('data-val', numericValue);
+    let numericValue = foundField.value;
+    foundField.setAttribute('data-val', numericValue);
 }
 
 console.log(foundField);
@@ -112,17 +112,33 @@ containerDiv.appendChild(ulElement);
 
 // Որոնել ցուցակի 3-րդ անդամը, ստանալ այդ անդամի պարունակությունը
 for (let i = 1; i <= 5; i++) {
-  let liElement = document.createElement('li');
-  liElement.textContent = `Item ${i}`;
-  ulElement.appendChild(liElement);
-  if (i === 3) {
-      // պահպանել այն պարփակող div-ի data-list-val ատրիբուտում
-      containerDiv.setAttribute('data-list-val', liElement.textContent);
-  }
+    let liElement = document.createElement('li');
+    liElement.textContent = `List Item ${i}`;
+    ulElement.appendChild(liElement);
+    if (i === 3) {
+        // պահպանել այն պարփակող div-ի data-list-val ատրիբուտում
+        containerDiv.setAttribute('data-list-val', liElement.textContent);
+    }
 }
 
 containerDiv.appendChild(ulElement);
 document.body.appendChild(containerDiv);
 console.log(containerDiv);
 
+// 8) Ստեղծել p էլեմենտ, որն ունի կլաս "message"
+let elem = document.createElement('p');
+elem.classList.add('message');
+document.body.appendChild(elem);
+
+// prompt-ի միջոցով ստանալ օգտատիրոջից հաղորդագրություն և անվտանգ գրել այն p-էլեմենտում
+let userMessage = prompt("Please enter your message:");
+let messageElement = document.querySelector('p.message');
+
+if (messageElement) {
+    let textNode = document.createTextNode(userMessage);
+    messageElement.innerHTML = '';
+    messageElement.appendChild(textNode);
+} else {
+    console.error("Element with class 'message' not found.");
+}
 
